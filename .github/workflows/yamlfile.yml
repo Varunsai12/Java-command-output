@@ -1,0 +1,47 @@
+name: MobileOTPVerification
+description: A Java application for OTP verification and health specifications.
+version: 1.0.0
+author: Varun Sai Palakala
+dependencies:
+  - java: 11
+  - libraries:
+    - Random
+    - Scanner
+    - Colorcode (custom class)
+components:
+  - class: MobileOTPVerification
+    description: Main class for OTP verification and health specifications.
+    methods:
+      - login: Handles user login and OTP verification.
+      - otpVerification: Verifies the OTP entered by the user.
+      - isSpecifications: Shows various health specifications options.
+      - BodyMassIndex: Calculates and displays BMI based on user input.
+      - calculateBMI: Helper method to calculate BMI.
+      - maleDetermineBMICategory: Determines BMI category for males.
+      - femaleDetermineBMICategory: Determines BMI category for females.
+      - healthDetails: Provides health details based on user choice.
+  - class: BasicMedicines
+    description: Provides basic medicinal information based on symptoms.
+    methods:
+      - cold: Provides information on cold symptoms and medication.
+      - fever: Provides information on fever symptoms and medication.
+      - stomachpain: Provides information on stomach pain symptoms and medication.
+      - bodypain: Provides information on body pain symptoms and medication.
+      - toothpain: Provides information on tooth pain symptoms and medication.
+      - Earinfection: Provides information on ear infection symptoms and medication.
+      - Eyeinfection: Provides information on eye infection symptoms and medication.
+      - Allergies: Provides information on allergies symptoms and medication.
+      - Gastritis: Provides information on gastritis symptoms and medication.
+  - class: Doctor
+    description: Abstract class for doctors.
+    methods:
+      - displayDetails: Abstract method to display doctor details.
+  - class: OrthopedicDoctor
+    description: Concrete class for Orthopedic Doctor.
+    methods:
+      - displayDetails: Displays details of an orthopedic doctor.
+  - class: EyeDoctor
+    description: Concrete class for Eye Doctor.
+    methods:
+      - displayDetails: Displays details of an eye doctor.
+  # Add other doctor classes similarly
